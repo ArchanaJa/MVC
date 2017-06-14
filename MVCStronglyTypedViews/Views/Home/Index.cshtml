@@ -1,0 +1,21 @@
+﻿@using MVCStronglyTypedViews.Models;
+@model IEnumerable<Album>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<h1>My Album Library</h1>
+
+    @foreach (Album r in Model)
+    {
+    <ul style="list-style:none">
+        <li>@r.title</li>
+        <li>@r.artist</li>
+        <li>@r.format</li>
+        <li>@r.price</li>
+     </ul>
+     <hr />
+    }
+
+
